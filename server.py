@@ -9,7 +9,7 @@ def home():
     console.log("[bold green]ISIS : Service accessed[/bold green]")
     return "Hello, World!"
 
-@app.route('/calculate?=<equation>')
+@app.route('/calculate?eq=<equation>')
 def calculate(equation):
     try:
         result = eval(equation)
