@@ -1,0 +1,37 @@
+[
+    {
+        "name": "dog",
+        "path": "memes/dog.jpg",
+        "category": "animal"
+    },
+    {
+        "name": "standup",
+        "path": "memes/standup.jpg",
+        "category": "general"
+    },
+    {
+        "name": "einstein_fafo",
+        "path": "memes/fafo.jpg",
+        "category": "general"
+    },
+    {
+        "name": "stupid_privilege",
+        "path": "memes/stupid1.jpg",
+        "category": "stupidity"
+    },
+    {
+        "name": "Trump_GAY",
+        "path": "memes/trump_gay.jpg",
+        "category": "general"
+    },
+    {
+        "name": "mcfc",
+        "path": "memes/mcfc.jpg",
+        "category": "general"
+    },
+    {
+        "name": "cry_hard",
+        "path": "memes/cry_hard.jpg",
+        "category": "general"
+    }
+]

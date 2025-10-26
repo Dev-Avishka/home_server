@@ -1,17 +1,26 @@
+from logs import log
 import flask
-from rich.console import Console 
+from db import *
+from routes import bp as routes_bp
+import os
+from flask import send_from_directory
+
+
 
 app = flask.Flask(__name__)
-console = Console()
+
+
+app.register_blueprint(routes_bp)
+
+PUBLIC_DIR = os.path.join(os.path.dirname(__file__), 'public')
 
 @app.route('/')
-def home():
-    console.log("[bold green]ISIS : Service accessed[/bold green]")
-    return "Hello, World!"
+def serve_index():
+    return send_from_directory(PUBLIC_DIR, 'index.html')
 
-@app.route('/sendimage')
-def serve_image():
-    return flask.send_file('images/image.jpg', mimetype='image/jpeg')
+@app.route('/<path:path>')
+def serve_public(path):
+    return send_from_directory(PUBLIC_DIR, path)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
